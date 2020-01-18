@@ -9,9 +9,14 @@ def main():
     return render_template('index.html')
 
 
-@app.route('/about/')
-def about():
-    return render_template('about.html')
+@app.route('/from/<direction>')
+def direction(direction):
+    return render_template('direction.html')
+
+
+@app.route('/tours/<id>')
+def tour(id):
+    return render_template('tour.html')
 
 
 @app.errorhandler(404)

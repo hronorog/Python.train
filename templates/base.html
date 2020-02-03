@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="shortcut icon" href="/static/favicon.ico" />
 </head>
 <body>
 
@@ -28,22 +29,7 @@
     {% block container %}
     {% endblock %}
 
-    {% if check_cards %}
-    <div class="row mt-5" data-test="cards">
-        {% for tour in tours %}
-        <div class="col-4" data-test="card">
-            <div class="card mb-3">
-            <img src="{{ tour.picture }}" class="card-img-top img-fluid" data-test="picture">
-                <div class="card-body">
-                  <h5 class="card-title">{{ tour.title }}</h5>
-                 <p class="card-text">{{ tour.description }}</p>
-                    <a href="" class="btn btn-sm btn-primary" data-test="tourlink">Подробнее</a>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-    {% endif %}
+
 </div>
 
 </body>

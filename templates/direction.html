@@ -1,6 +1,24 @@
 {% extends 'base.html' %}
 
 {% block container %}
-  <h1 class="display-5 mt-4">Летим из <span data-test="from">Новосибирска</span></h1>
-    <p class="mb-4" >Найдено <span data-test="tourcount">{{ tours | length }}</span> туров, от <span data-test="pricemin">{{ tours.price }}</span> до <span data-test="pricemax">{{ tours.price | max}}</span> и от <span data-test="nightsmax">{{ tours.nights | min }}</span> ночей до <span data-test="nightsmax">{{ tours.nights | max }}</span> ночей</p>
+
+{% set night = tours | sort(attribute='nights') %}
+  <h1 class="display-5 mt-4">Летим <span data-test="from">{{ city }}</span></h1>
+    <p class="mb-4" >Найдено <span data-test="tourcount">{{ tours | length }}</span> туров, от <span data-test="pricemin">{{ (tours | first).price }}</span> до <span data-test="pricemax">{{ (tours | last).price }}</span> и от <span data-test="nightsmax">{{(night | first).nights}}</span> ночей до <span data-test="nightsmax">{{ (night | last).nights }}</span> ночей</p>
+
+    <div class="row mt-5" data-test="cards">
+        {% for tour in tours %}
+        <div class="col-4" data-test="card">
+            <div class="card mb-3">
+            <img src="{{ tour.picture }}" class="card-img-top img-fluid" data-test="picture">
+                <div class="card-body">
+                  <h5 class="card-title">{{ tour.title }}</h5>
+                 <p class="card-text">{{ tour.description | truncate(200) }}</p>
+                    <a href="" class="btn btn-sm btn-primary" data-test="tourlink">Подробнее</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
 {% endblock %}

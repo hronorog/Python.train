@@ -2,8 +2,11 @@
 title = "Stepik Travel"
 subtitle = "Для тех, кого отвлекают дома"
 description = "Лучшие направления, где никто не будет вам мешать сидеть на берегу и изучать программирование, дизайн, разработку игр и управление продуктами"
-departures = {"msk" :"Из Москвы" ,"spb" :"Из Петербурга" ,"nsk" :"Из Новосибирска" ,"ekb" :"Из Екатеринбурга"
-              ,"kazan" :"Из Казани"}
+departures = {"msk": "Из Москвы",
+              "spb": "Из Петербурга",
+              "nsk": "Из Новосибирска",
+              "ekb": "Из Екатеринбурга",
+              "kazan": "Из Казани"}
 
 tours = {
     1: {
@@ -24,8 +27,8 @@ tours = {
         "picture": "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
         "price": 85000,
         "stars": "5",
-        "country" :"Вьетнам",
-        "nights" :8,
+        "country": "Вьетнам",
+        "nights": 8,
         "date": "12 января",
     },
     3: {
@@ -35,8 +38,8 @@ tours = {
         "picture": "https://images.unsplash.com/photo-1569660072562-48a035e65c30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
         "price": 63000,
         "stars": "3",
-        "country" :"Пакистан",
-        "nights": 11,
+        "country": "Пакистан",
+        "nights" : 11,
         "date": "7 февраля",
     },
     4: {
@@ -46,8 +49,8 @@ tours = {
         "picture": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
         "price": 62000,
         "stars": "4",
-        "country" :"Индия",
-        "nights" :9,
+        "country": "Индия",
+        "nights": 9,
         "date": "22 января",
     },
     5: {
@@ -57,8 +60,8 @@ tours = {
         "picture": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
         "price": 68000,
         "stars": "4",
-        "country" :"Доминикана",
-        "nights" :8,
+        "country": "Доминикана",
+        "nights": 8,
         "date": "18 января",
     },
     6: {
@@ -69,7 +72,7 @@ tours = {
         "price": 53000,
         "stars": "3",
         "country": "Пакистан",
-        "nights" :13,
+        "nights": 13,
         "date": "15 февраля",
     },
     7: {

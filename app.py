@@ -1,8 +1,7 @@
 # -*- coding: utf8 -*-
-from flask import Flask, render_template
+from flask import Flask, render_template, abort
 from data import *
 from random import shuffle
-
 
 
 app = Flask(__name__)
@@ -30,12 +29,16 @@ def main():
 def direction(direction):
     # фильтруем туры по выбранному направлению
     lst = []
+    city = ''
     for k, v in tours.items():
         if v["departure"] == direction:
             lst.append(v)
             city = departures[direction]
     # направление
-    city = city[:1].lower()+city[1:]
+    try:
+        city = city[:1].lower()+city[1:]
+    except:
+        pass
     return render_template('direction.html',
                            city=city,
                            title=title,
@@ -48,7 +51,12 @@ def direction(direction):
 
 @app.route('/tour/<ids>')
 def tour(ids):
-    tourset = tours[int(ids)]
+    try:
+        tourset = tours[int(ids)]
+    except KeyError:
+        tourset = None
+    if tourset is None:
+        abort(404, description='Uuuuuups, WTF?')
     return render_template('tour.html',
                            title=title,
                            tour=tourset,

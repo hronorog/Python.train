@@ -31,7 +31,7 @@ def direction(direction):
     lst = []
     city = ''
     for k, v in tours.items():
-        if v["departure"] == direction:
+        if v["departure"] == str(direction):
             lst.append(v)
             city = departures[direction]
     # направление

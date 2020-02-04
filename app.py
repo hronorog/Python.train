@@ -51,8 +51,11 @@ def direction(direction):
 
 @app.route('/tour/<ids>')
 def tour(ids):
+    tourset = None
     try:
-        tourset = tours[int(ids)]
+        for k, v in tours.items():
+            if v["title"] == ids:
+                tourset = v
     except KeyError:
         tourset = None
     if tourset is None:

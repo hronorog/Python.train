@@ -73,4 +73,5 @@ def not_found(e):
     return "Такой страницы нет"
 
 
-app.run('0.0.0.0', 8000)
+if __name__ == "__main__":
+    app.run('0.0.0.0', 8000)

@@ -25,7 +25,7 @@ def main():
                            departures=departures)
 
 
-@app.route('/from/<direction>')
+@app.route('/from/<direction>/')
 def direction(direction):
     # фильтруем туры по выбранному направлению
     lst = []
@@ -49,7 +49,7 @@ def direction(direction):
                            )
 
 
-@app.route('/tour/<ids>')
+@app.route('/tour/<ids>/')
 def tour(ids):
     tourset = None
     try:
